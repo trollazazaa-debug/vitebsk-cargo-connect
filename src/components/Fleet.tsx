@@ -9,21 +9,24 @@ const vehicles = [
     name: "Газель",
     capacity: "до 1.5 тонн",
     volume: "9 м³",
-    price: "от 35 BYN/час",
+    price: "от 30 BYN/час",
+    imageClass: "max-h-full",
   },
   {
     image: truckSprinter,
     name: "Фургон Спринтер 3 тонн",
     capacity: "до 3 тонн",
     volume: "16 м³",
-    price: "от 50 BYN/час",
+    price: "от 35 BYN/час",
+    imageClass: "max-h-full",
   },
   {
     image: truck5ton,
     name: "Грузовик 5 тонн",
     capacity: "до 5 тонн",
     volume: "32 м³",
-    price: "от 70 BYN/час",
+    price: "от 50 BYN/час",
+    imageClass: "max-h-full scale-125",
   },
 ];
 
@@ -55,7 +58,7 @@ const Fleet = () => {
                 <img
                   src={vehicle.image}
                   alt={vehicle.name}
-                  className="max-h-full max-w-full object-contain transition-all duration-500 group-hover:scale-105"
+                  className={`max-w-full object-contain transition-all duration-500 group-hover:scale-105 ${vehicle.imageClass}`}
                 />
                 
                 {/* Dark overlay with price on hover */}
