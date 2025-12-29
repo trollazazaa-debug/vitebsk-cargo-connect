@@ -9,18 +9,21 @@ const vehicles = [
     name: "Газель",
     capacity: "до 1.5 тонн",
     volume: "9 м³",
+    price: "от 35 BYN/час",
   },
   {
     image: truckSprinter,
     name: "Фургон Спринтер 3 тонн",
     capacity: "до 3 тонн",
     volume: "16 м³",
+    price: "от 50 BYN/час",
   },
   {
     image: truck5ton,
     name: "Грузовик 5 тонн",
     capacity: "до 5 тонн",
     volume: "32 м³",
+    price: "от 70 BYN/час",
   },
 ];
 
@@ -47,19 +50,23 @@ const Fleet = () => {
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <div className="h-48 flex items-center justify-center mb-4 bg-secondary/50 rounded-lg overflow-hidden relative">
-                {/* Animated background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
+              <div className="h-48 flex items-center justify-center mb-4 rounded-lg overflow-hidden relative">
+                {/* Image with hover overlay */}
                 <img
                   src={vehicle.image}
                   alt={vehicle.name}
-                  className="max-h-full max-w-full object-contain transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-2xl"
+                  className="max-h-full max-w-full object-contain transition-all duration-500 group-hover:scale-105"
                 />
-
-                {/* Floating specs on hover */}
-                <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                  {vehicle.volume}
+                
+                {/* Dark overlay with price on hover */}
+                <div className="absolute inset-0 bg-foreground/70 opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col items-center justify-center">
+                  <span className="text-background text-2xl font-bold mb-2">{vehicle.price}</span>
+                  <a
+                    href="#contacts"
+                    className="text-sm text-primary-foreground bg-primary px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                  >
+                    Заказать
+                  </a>
                 </div>
               </div>
 
@@ -76,16 +83,6 @@ const Fleet = () => {
                   <span className="w-2 h-2 rounded-full bg-primary animate-pulse" style={{ animationDelay: "0.5s" }} />
                   <span className="text-foreground font-medium">Объем:</span> {vehicle.volume}
                 </p>
-              </div>
-
-              {/* CTA button on hover */}
-              <div className="mt-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0">
-                <a
-                  href="#contacts"
-                  className="inline-block text-sm text-primary font-medium hover:underline"
-                >
-                  Заказать →
-                </a>
               </div>
             </div>
           ))}
