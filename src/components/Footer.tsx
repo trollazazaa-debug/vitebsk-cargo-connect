@@ -1,15 +1,22 @@
 import { Truck, Phone, Mail, MapPin } from "lucide-react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const Footer = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer ref={ref} className="bg-foreground text-background py-12 overflow-hidden">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div
+          className={`grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 scroll-fade-up ${
+            isVisible ? "visible" : ""
+          }`}
+        >
           {/* Logo & Description */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                <Truck className="w-5 h-5 text-primary-foreground" />
+            <div className="flex items-center gap-3 mb-4 group">
+              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Truck className="w-5 h-5 text-primary-foreground group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div>
                 <div className="font-bold text-lg">ВитебскГруз</div>
@@ -25,21 +32,21 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Навигация</h4>
             <nav className="space-y-2">
-              <a href="#services" className="block text-background/70 hover:text-primary transition-colors">
-                Услуги
-              </a>
-              <a href="#advantages" className="block text-background/70 hover:text-primary transition-colors">
-                Преимущества
-              </a>
-              <a href="#fleet" className="block text-background/70 hover:text-primary transition-colors">
-                Автопарк
-              </a>
-              <a href="#prices" className="block text-background/70 hover:text-primary transition-colors">
-                Цены
-              </a>
-              <a href="#contacts" className="block text-background/70 hover:text-primary transition-colors">
-                Контакты
-              </a>
+              {[
+                { href: "#services", label: "Услуги" },
+                { href: "#advantages", label: "Преимущества" },
+                { href: "#fleet", label: "Автопарк" },
+                { href: "#prices", label: "Цены" },
+                { href: "#contacts", label: "Контакты" },
+              ].map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block text-background/70 hover:text-primary hover:translate-x-1 transition-all duration-300"
+                >
+                  {link.label}
+                </a>
+              ))}
             </nav>
           </div>
 
@@ -49,16 +56,16 @@ const Footer = () => {
             <div className="space-y-3">
               <a
                 href="tel:+375291234567"
-                className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors group"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform" />
                 +375 (29) 123-45-67
               </a>
               <a
                 href="mailto:info@vitebskgruz.by"
-                className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors group"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
                 info@vitebskgruz.by
               </a>
               <div className="flex items-center gap-2 text-background/70">
@@ -69,7 +76,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/20 pt-6 text-center text-background/50 text-sm">
+        <div
+          className={`border-t border-background/20 pt-6 text-center text-background/50 text-sm scroll-fade-up ${
+            isVisible ? "visible" : ""
+          }`}
+          style={{ transitionDelay: "200ms" }}
+        >
           © {new Date().getFullYear()} ВитебскГруз. Все права защищены.
         </div>
       </div>
