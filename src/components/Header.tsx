@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <div className={`font-bold text-lg transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-background"}`}>
-                ВитебскГруз
+                ВитЭкспресс
               </div>
               <div className={`text-xs transition-colors duration-300 ${isScrolled ? "text-muted-foreground" : "text-background/70"}`}>
                 Надежные грузоперевозки

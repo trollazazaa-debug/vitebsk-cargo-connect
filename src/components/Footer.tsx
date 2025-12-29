@@ -19,7 +19,7 @@ const Footer = () => {
                 <Truck className="w-5 h-5 text-primary-foreground group-hover:rotate-12 transition-transform duration-300" />
               </div>
               <div>
-                <div className="font-bold text-lg">ВитебскГруз</div>
+                <div className="font-bold text-lg">ВитЭкспресс</div>
                 <div className="text-xs text-background/60">Надежные грузоперевозки</div>
               </div>
             </div>
@@ -82,7 +82,7 @@ const Footer = () => {
           }`}
           style={{ transitionDelay: "200ms" }}
         >
-          © {new Date().getFullYear()} ВитебскГруз. Все права защищены.
+          © {new Date().getFullYear()} ВитЭкспресс. Все права защищены.
         </div>
       </div>
     </footer>
