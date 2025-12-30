@@ -1,7 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, forwardRef } from "react";
 import { X, MessageCircle, ArrowUp } from "lucide-react";
 
-const FloatingButtons = () => {
+const FloatingButtons = forwardRef<HTMLDivElement>((_, forwardedRef) => {
   const [isOpen, setIsOpen] = useState(false);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -89,6 +89,8 @@ const FloatingButtons = () => {
       </button>
     </div>
   );
-};
+});
+
+FloatingButtons.displayName = "FloatingButtons";
 
 export default FloatingButtons;

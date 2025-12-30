@@ -1,7 +1,8 @@
+import { forwardRef } from "react";
 import { Truck, Phone, Mail, MapPin } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
-const Footer = () => {
+const Footer = forwardRef<HTMLElement>((_, forwardedRef) => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
@@ -87,6 +88,8 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
+});
+
+Footer.displayName = "Footer";
 
 export default Footer;
