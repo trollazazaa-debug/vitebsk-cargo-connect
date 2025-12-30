@@ -41,24 +41,7 @@ const Hero = () => {
           
           <div className="overflow-hidden">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-6 animate-[slideInFromLeft_0.8s_ease-out_forwards]">
-              Грузоперевозки по{" "}
-              <span className="relative inline-block">
-                Витебску
-                <svg
-                  className="absolute -bottom-2 left-0 w-full animate-[drawLine_1s_ease-out_0.8s_forwards]"
-                  viewBox="0 0 200 10"
-                  style={{ strokeDasharray: 200, strokeDashoffset: 200 }}
-                >
-                  <path
-                    d="M0 5 Q50 0, 100 5 T200 5"
-                    fill="none"
-                    stroke="hsl(var(--primary))"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>{" "}
-              и области
+              Грузоперевозки по Витебску и области
             </h1>
           </div>
 
@@ -68,9 +51,9 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 animate-[fadeInUp_0.8s_ease-out_0.5s_forwards] opacity-0">
             <Button variant="hero" size="lg" className="group shine" asChild>
-              <a href="#contacts">
-                Заказать перевозку
-                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+              <a href="tel:+375256775849">
+                Позвонить
+                <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">📞</span>
               </a>
             </Button>
             <Button variant="heroOutline" size="lg" className="group" asChild>

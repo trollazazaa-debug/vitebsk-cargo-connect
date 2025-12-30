@@ -66,7 +66,7 @@ const Header = () => {
           {/* Phone */}
           <div className="hidden md:flex items-center gap-4">
             <a
-              href="tel:+375291234567"
+              href="tel:+375256775849"
               className={`flex items-center gap-2 font-semibold transition-all duration-300 group ${
                 isScrolled ? "text-primary hover:text-primary/80" : "text-background hover:text-background/80"
               }`}
@@ -75,7 +75,7 @@ const Header = () => {
                 <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full animate-pulse" />
               </div>
-              <span>+375 (29) 123-45-67</span>
+              <span>+375 (25) 677-58-49</span>
             </a>
           </div>
 
@@ -119,11 +119,11 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="tel:+375291234567"
+                href="tel:+375256775849"
                 className="flex items-center gap-2 text-primary font-semibold px-4 py-2 mt-2 bg-primary/5 rounded-lg"
               >
                 <Phone className="w-5 h-5" />
-                <span>+375 (29) 123-45-67</span>
+                <span>+375 (25) 677-58-49</span>
               </a>
             </nav>
           </div>

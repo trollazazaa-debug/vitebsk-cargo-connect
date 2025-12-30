@@ -34,7 +34,7 @@ const FloatingButtons = () => {
       <div className={`flex flex-col items-end gap-3 transition-all duration-300 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
         {/* WhatsApp */}
         <a
-          href="https://wa.me/375291234567"
+          href="https://wa.me/375256775849"
           target="_blank"
           rel="noopener noreferrer"
           className={`w-14 h-14 rounded-full bg-green-500 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl hover:shadow-green-500/30 transition-all duration-300 ${
@@ -50,7 +50,7 @@ const FloatingButtons = () => {
 
         {/* Telegram */}
         <a
-          href="https://t.me/vitebskgruz"
+          href="https://t.me/vitexpress"
           target="_blank"
           rel="noopener noreferrer"
           className={`w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 ${
