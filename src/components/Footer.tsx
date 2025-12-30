@@ -55,18 +55,18 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Контакты</h4>
             <div className="space-y-3">
               <a
-                href="tel:+375291234567"
+                href="tel:+375256775849"
                 className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors group"
               >
                 <Phone className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                +375 (29) 123-45-67
+                +375 (25) 677-58-49
               </a>
               <a
-                href="mailto:info@vitebskgruz.by"
+                href="mailto:info@vitexpress.by"
                 className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                info@vitebskgruz.by
+                info@vitexpress.by
               </a>
               <div className="flex items-center gap-2 text-background/70">
                 <MapPin className="w-4 h-4 flex-shrink-0" />

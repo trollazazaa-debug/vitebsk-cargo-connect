@@ -8,14 +8,14 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Телефон",
-    value: "+375 (29) 123-45-67",
-    href: "tel:+375291234567",
+    value: "+375 (25) 677-58-49",
+    href: "tel:+375256775849",
   },
   {
     icon: Mail,
     label: "Email",
-    value: "info@vitebskgruz.by",
-    href: "mailto:info@vitebskgruz.by",
+    value: "info@vitexpress.by",
+    href: "mailto:info@vitexpress.by",
   },
   {
     icon: MapPin,
