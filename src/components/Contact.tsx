@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useState, forwardRef } from "react";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import { supabase } from "@/integrations/supabase/client";
 
 const contactInfo = [
   {
@@ -14,8 +15,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@vitexpress.by",
-    href: "mailto:info@vitexpress.by",
+    value: "vitexpress.00@mail.ru",
+    href: "mailto:vitexpress.00@mail.ru",
   },
   {
     icon: MapPin,
@@ -32,7 +33,7 @@ const cargoTypes = [
   "Другое",
 ];
 
-const Contact = () => {
+const Contact = forwardRef<HTMLElement>((_, forwardedRef) => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -50,17 +51,29 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Заявка отправлена!",
-      description: "Мы свяжемся с вами в ближайшее время.",
-    });
-    setFormData({ name: "", phone: "", cargoType: "", message: "" });
-    setIsSubmitting(false);
-  };
+    try {
+      const { error } = await supabase.functions.invoke('send-order-email', {
+        body: formData,
+      });
 
+      if (error) throw error;
+
+      toast({
+        title: "Заявка отправлена!",
+        description: "Мы свяжемся с вами в ближайшее время.",
+      });
+      setFormData({ name: "", phone: "", cargoType: "", message: "" });
+    } catch (error) {
+      console.error('Error sending order:', error);
+      toast({
+        title: "Ошибка отправки",
+        description: "Пожалуйста, попробуйте позже или позвоните нам.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section id="contacts" className="section-padding bg-section-alt relative overflow-hidden">
       {/* Animated background elements */}
@@ -230,6 +243,8 @@ const Contact = () => {
       </div>
     </section>
   );
-};
+});
+
+Contact.displayName = "Contact";
 
 export default Contact;

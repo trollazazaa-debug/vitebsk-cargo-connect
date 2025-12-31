@@ -63,11 +63,11 @@ const Footer = forwardRef<HTMLElement>((_, forwardedRef) => {
                 +375 (25) 677-58-49
               </a>
               <a
-                href="mailto:info@vitexpress.by"
+                href="mailto:vitexpress.00@mail.ru"
                 className="flex items-center gap-2 text-background/70 hover:text-primary transition-colors group"
               >
                 <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                info@vitexpress.by
+                vitexpress.00@mail.ru
               </a>
               <div className="flex items-center gap-2 text-background/70">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
