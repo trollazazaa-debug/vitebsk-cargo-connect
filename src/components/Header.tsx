@@ -120,7 +120,7 @@ const Header = () => {
               ))}
               <a
                 href="tel:+375256775849"
-                className="flex items-center justify-center gap-2 text-primary font-semibold px-4 py-2 mt-2 bg-primary/5 rounded-lg"
+                className="flex items-center gap-2 text-primary font-semibold px-4 py-2 mt-2 bg-primary/5 rounded-lg"
               >
                 <Phone className="w-5 h-5" />
                 <span>+375 (25) 677-58-49</span>
