@@ -1,5 +1,6 @@
-import { Phone, Truck, Menu, X } from "lucide-react";
+import { Phone, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { href: "#services", label: "Услуги" },
@@ -33,9 +34,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-              <Truck className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground group-hover:rotate-12 transition-transform duration-300" />
-            </div>
+            <img 
+              src={logo} 
+              alt="ВитЭкспресс логотип" 
+              className="w-10 h-10 md:w-12 md:h-12 group-hover:scale-110 transition-transform duration-300"
+            />
             <div className="hidden sm:block">
               <div className={`font-bold text-lg transition-colors duration-300 ${isScrolled ? "text-foreground" : "text-background"}`}>
                 ВитЭкспресс

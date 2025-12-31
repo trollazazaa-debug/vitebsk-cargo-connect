@@ -1,6 +1,7 @@
 import { forwardRef } from "react";
-import { Truck, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
+import logo from "@/assets/logo.png";
 
 const Footer = forwardRef<HTMLElement>((_, forwardedRef) => {
   const { ref, isVisible } = useScrollAnimation();
@@ -16,9 +17,11 @@ const Footer = forwardRef<HTMLElement>((_, forwardedRef) => {
           {/* Logo & Description */}
           <div>
             <div className="flex items-center gap-3 mb-4 group">
-              <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Truck className="w-5 h-5 text-primary-foreground group-hover:rotate-12 transition-transform duration-300" />
-              </div>
+              <img 
+                src={logo} 
+                alt="ВитЭкспресс логотип" 
+                className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+              />
               <div>
                 <div className="font-bold text-lg">ВитЭкспресс</div>
                 <div className="text-xs text-background/60">Надежные грузоперевозки</div>
