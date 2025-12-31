@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import { Truck, Home, Settings, Users, MapPin, Building2, Sofa, Piano, Package, Wrench, HardHat, Trash2 } from "lucide-react";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
@@ -42,10 +43,9 @@ const pricingCategories = [
   },
 ];
 
-const Pricing = () => {
+const Pricing = forwardRef<HTMLElement>((_, forwardedRef) => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation({ threshold: 0.05 });
-
   return (
     <section id="prices" className="section-padding overflow-hidden">
       <div className="container-custom">
@@ -107,6 +107,8 @@ const Pricing = () => {
       </div>
     </section>
   );
-};
+});
+
+Pricing.displayName = "Pricing";
 
 export default Pricing;
