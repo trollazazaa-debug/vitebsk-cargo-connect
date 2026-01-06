@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { supabase } from "@/integrations/supabase/client";
+import contactBg from "@/assets/contact-bg.jpg";
 
 const contactInfo = [
   {
@@ -75,12 +76,18 @@ const Contact = forwardRef<HTMLElement>((_, forwardedRef) => {
     }
   };
   return (
-    <section id="contacts" className="section-padding bg-section-alt relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-      </div>
+    <section 
+      id="contacts" 
+      className="section-padding relative overflow-hidden"
+      style={{
+        backgroundImage: `url(${contactBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-background/90 pointer-events-none" />
 
       <div className="container-custom relative z-10">
         <div ref={titleRef} className={`scroll-fade-up ${titleVisible ? "visible" : ""}`}>
