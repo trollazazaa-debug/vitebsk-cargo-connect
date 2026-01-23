@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import Advantages from "@/components/Advantages";
 import Fleet from "@/components/Fleet";
 import Pricing from "@/components/Pricing";
+import Calculator from "@/components/Calculator";
 import Contact from "@/components/Contact";
 import FloatingButtons from "@/components/FloatingButtons";
 import Footer from "@/components/Footer";
@@ -28,6 +29,7 @@ const Index = () => {
         <Advantages />
         <Fleet />
         <Pricing />
+        <Calculator />
         <Contact />
       </main>
       <Footer />

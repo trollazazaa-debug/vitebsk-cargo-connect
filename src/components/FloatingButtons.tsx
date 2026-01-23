@@ -66,7 +66,7 @@ const FloatingButtons = forwardRef<HTMLDivElement>((_, forwardedRef) => {
 
         {/* Telegram */}
         <a
-          href="https://t.me/vitexpress"
+          href="https://t.me/+375256775849"
           target="_blank"
           rel="noopener noreferrer"
           className={`w-14 h-14 rounded-full bg-blue-500 flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 ${
