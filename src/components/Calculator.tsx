@@ -90,7 +90,7 @@ const Calculator = forwardRef<HTMLElement>((_, forwardedRef) => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 text-foreground">
                     <Clock className="w-5 h-5 text-primary" />
-                    <span className="font-medium">Время работы (часов)</span>
+                    <span className="font-medium">Грузовик (часов)</span>
                   </div>
                   <Slider
                     value={[hours]}
