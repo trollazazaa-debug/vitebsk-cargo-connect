@@ -71,7 +71,7 @@ const Footer = forwardRef<HTMLElement>((_, forwardedRef) => {
               </a>
               <div className="flex items-center gap-2 text-background/70">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                г. Витебск, ул. Московская, 83А
+                г. Витебск, пр. Строителей, 15B
               </div>
             </div>
           </div>

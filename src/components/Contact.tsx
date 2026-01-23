@@ -22,7 +22,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Адрес",
-    value: "г. Витебск, ул. Московская, 83А",
+    value: "г. Витебск, пр. Строителей, 15B",
   },
 ];
 
