@@ -6,6 +6,7 @@ const navLinks = [
   { href: "#advantages", label: "Преимущества" },
   { href: "#fleet", label: "Автопарк" },
   { href: "#prices", label: "Цены" },
+  { href: "#calculator", label: "Калькулятор" },
   { href: "#contacts", label: "Контакты" },
 ];
 
