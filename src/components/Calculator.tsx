@@ -18,7 +18,7 @@ const Calculator = forwardRef<HTMLElement>((_, forwardedRef) => {
 
   // Pricing
   const CITY_VEHICLE_RATE = 35; // руб/час
-  const LOADER_RATE = 15; // руб/час для грузчика
+  const LOADER_RATE = 17; // руб/час для грузчика
   const INTERCITY_RATE_3T = 1; // руб/км до 3т
   const INTERCITY_RATE_5T = 1.4; // руб/км до 5т
 
@@ -36,12 +36,6 @@ const Calculator = forwardRef<HTMLElement>((_, forwardedRef) => {
     }
   };
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById("contact");
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="calculator" className="section-padding bg-secondary/30 overflow-hidden">
@@ -187,11 +181,11 @@ const Calculator = forwardRef<HTMLElement>((_, forwardedRef) => {
                   {Math.round(calculateCost())} руб
                 </div>
                 <Button
-                  onClick={scrollToContact}
+                  asChild
                   size="xl"
                   className="mt-2 shadow-lg hover:shadow-xl transition-shadow"
                 >
-                  Заказать перевозку
+                  <a href="tel:+375256775849">Заказать перевозку</a>
                 </Button>
               </div>
             </div>

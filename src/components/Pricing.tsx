@@ -35,7 +35,7 @@ const pricingCategories = [
     title: "Дополнительные услуги",
     icon: Users,
     items: [
-      { icon: Users, name: "Грузчики", price: "20 руб/час" },
+      { icon: Users, name: "Грузчики", price: "17 руб/час" },
       { icon: Wrench, name: "Сборка/разборка мебели", price: "20 руб/час" },
       { icon: HardHat, name: "Разнорабочие", price: "20 руб/час" },
       { icon: Trash2, name: "Вывоз мусора", price: "от 150 руб" },
