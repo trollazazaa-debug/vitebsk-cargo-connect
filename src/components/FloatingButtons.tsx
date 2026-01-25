@@ -38,13 +38,13 @@ const FloatingButtons = forwardRef<HTMLDivElement>((_, forwardedRef) => {
           href="viber://add?number=375256775849"
           target="_blank"
           rel="noopener noreferrer"
-          className={`w-14 h-14 rounded-full overflow-hidden flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl hover:shadow-[#7360F2]/30 transition-all duration-300 ${
+          className={`w-14 h-14 rounded-full bg-[#7360F2] flex items-center justify-center shadow-lg hover:scale-110 hover:shadow-xl hover:shadow-[#7360F2]/30 transition-all duration-300 ${
             isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
           style={{ transitionDelay: isOpen ? "150ms" : "0ms" }}
           title="Viber"
         >
-          <img src={viberIcon} alt="Viber" className="w-full h-full object-cover" />
+          <img src={viberIcon} alt="Viber" className="w-8 h-8 object-contain" />
         </a>
 
         {/* WhatsApp */}
