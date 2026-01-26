@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import truckGazelle from "@/assets/truck-gazelle.png";
 import truckSprinter from "@/assets/truck-sprinter.png";
 import truck5ton from "@/assets/truck-5ton.png";
@@ -30,12 +31,12 @@ const vehicles = [
   },
 ];
 
-const Fleet = () => {
+const Fleet = forwardRef<HTMLElement>((_, forwardedRef) => {
   const { ref: titleRef, isVisible: titleVisible } = useScrollAnimation();
   const { ref: cardsRef, isVisible: cardsVisible } = useScrollAnimation({ threshold: 0.05 });
 
   return (
-    <section id="fleet" className="section-padding bg-section-alt overflow-hidden">
+    <section ref={forwardedRef} id="fleet" className="section-padding bg-section-alt overflow-hidden">
       <div className="container-custom">
         <div ref={titleRef} className={`scroll-fade-up ${titleVisible ? "visible" : ""}`}>
           <h2 className="section-title">Наш автопарк</h2>
@@ -93,6 +94,8 @@ const Fleet = () => {
       </div>
     </section>
   );
-};
+});
+
+Fleet.displayName = "Fleet";
 
 export default Fleet;
