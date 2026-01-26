@@ -1,6 +1,6 @@
 import { useState, useEffect, forwardRef } from "react";
 import { X, MessageCircle, ArrowUp } from "lucide-react";
-import viberIcon from "@/assets/viber-icon.png";
+import ViberIcon from "@/components/icons/ViberIcon";
 
 const FloatingButtons = forwardRef<HTMLDivElement>((_, forwardedRef) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ const FloatingButtons = forwardRef<HTMLDivElement>((_, forwardedRef) => {
           style={{ transitionDelay: isOpen ? "150ms" : "0ms" }}
           title="Viber"
         >
-          <img src={viberIcon} alt="Viber" className="w-8 h-8 object-contain" />
+          <ViberIcon className="w-7 h-7 text-white" />
         </a>
 
         {/* WhatsApp */}
